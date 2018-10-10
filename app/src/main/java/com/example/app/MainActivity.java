@@ -34,8 +34,9 @@ public class MainActivity extends Activity {
 
         // REMOTE RESOURCE
         mWebView.loadUrl("http://10.0.2.2/sugarcntr/");
+        mWebView.setWebViewClient(new WebViewClient());
 
-        mWebView.setWebViewClient(new MyWebViewClient());
+        //mWebView.setWebViewClient(new MyWebViewClient());
 
         // LOCAL RESOURCE
         // mWebView.loadUrl("file:///android_asset/index.html");
