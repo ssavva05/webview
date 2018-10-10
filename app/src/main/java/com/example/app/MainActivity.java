@@ -25,9 +25,16 @@ public class MainActivity extends Activity {
         // Enable Javascript
         WebSettings webSettings = mWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
+        mWebView.getSettings().setDomStorageEnabled(true);
+        mWebView.getSettings().setAllowUniversalAccessFromFileURLs(true);
+        mWebView.getSettings().setUserAgentString("Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36");
+        mWebView.getSettings().setJavaScriptEnabled(true);
+        mWebView.getSettings().setSupportMultipleWindows(true);
+
 
         // REMOTE RESOURCE
-        mWebView.loadUrl("http://10.0.2.2/dashboard/");
+        mWebView.loadUrl("http://10.0.2.2/sugarcntr/");
+
         mWebView.setWebViewClient(new MyWebViewClient());
 
         // LOCAL RESOURCE
